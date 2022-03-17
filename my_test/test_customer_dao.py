@@ -6,7 +6,7 @@ customer_dao = CustomerDAOImp()
 
 
 def test_create_customer_success():
-    customer = Customer(0, "first", "last")
+    customer = Customer(0, "first_name", "last_name")
     result = customer_dao.create_customer_record(customer)
     assert result.customer_id != 0
 
@@ -14,7 +14,7 @@ def test_create_customer_success():
 def test_create_customer_with_malformed_id():
     # if wrong data type of id is provided the customer object the method should still work.
     customer = Customer("one", "Timmy", "Jimmy")
-    result = customer_dao.create_customer_record()
+    result = customer_dao.create_customer_record(customer)
     assert result.customer_id != 0
 
 

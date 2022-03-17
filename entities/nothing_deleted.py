@@ -1,4 +1,4 @@
 
-class NothingDeleted():
+class NothingDeleted(Exception):
     pass
 
