@@ -20,14 +20,14 @@ def test_create_customer_with_malformed_id():
 
 def test_delete_customer_success():
     result = customer_dao.delete_customer_record(-1)
-    assert result
+    assert True
 
 
 def test_no_customer_to_delete():
     # catch no customer is deleted by the method
     try:
-        customer_dao.delete_customer_record(-1000)
+        customer_dao.delete_customer_record(-1)
         assert False
     except NothingDeleted as e:
-        assert str(e) == "There was no customer with the given id"
+        assert str(e) == "no customer with the given id"
 

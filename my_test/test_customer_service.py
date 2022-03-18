@@ -57,4 +57,4 @@ def test_catch_invalid_id():
         customer_service.service_delete_customer_record("one")
         assert False
     except BadCustomerInfo as e:
-        assert str(e) == "Customer Id poorly formatted, please try again"
+        assert str(e) == "Invalid customer information, please try again"

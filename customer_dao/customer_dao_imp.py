@@ -24,6 +24,7 @@ class CustomerDAOImp(CustomerDAOInterface):
         if cursor.rowcount != 0:
             return True
         else:
-            raise NothingDeleted("no customer with the given ID")
+            raise NothingDeleted("no customer with the given id")
+
 
 
